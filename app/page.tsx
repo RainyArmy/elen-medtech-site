@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { siteContent } from "../content/site";
 
 const navItems = [
   { href: "#problem", label: "The Problem" },
@@ -28,10 +29,10 @@ export default function HomePage() {
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-semibold tracking-wide text-slate-900">
-                ELEN MedTech
+              {siteContent.brand.name}
               </span>
               <span className="text-xs text-slate-500">
-                Early-stage medical technology
+              {siteContent.brand.tagline}
               </span>
             </div>
           </div>

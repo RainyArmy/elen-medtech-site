@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const navItems = [
   { href: "#problem", label: "The Problem" },
@@ -15,8 +16,15 @@ export default function HomePage() {
       <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-white text-sm font-semibold">
-              EL
+            <div className="relative h-10 w-10 overflow-hidden rounded-md">
+              <Image
+                src="/elen-logo.png"
+                alt="ELEN MedTech logo"
+                fill
+                sizes="40px"
+                className="object-contain"
+                priority
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-semibold tracking-wide text-slate-900">
